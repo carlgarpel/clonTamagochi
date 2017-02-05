@@ -72,8 +72,8 @@ var GameState = {
     this.game.add.text(10, 20, "Comida:", style);
     this.game.add.text(140, 20, "Risa:", style);
 
-    this.healthText = this.game.add.text(80, 20, "", style);
-    this.funText = this.game.add.text(185, 20, "", style);
+    this.healthText = this.game.add.text(100, 20, "", style);
+    this.funText = this.game.add.text(200, 20, "", style);
     this.refreshStats();
 
     //decrease health and fun every 10 seconds
