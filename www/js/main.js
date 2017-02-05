@@ -2,11 +2,11 @@
 var GameState = {
   //load the game assets before the game starts
   preload: function() {
-    this.game.load.image('backyard', 'assets/images/backyard.png');    
-    this.game.load.image('apple', 'assets/images/apple.png');    
-    this.game.load.image('candy', 'assets/images/candy.png');    
+    this.game.load.image('backyard', 'assets/images/fondo.png');    
+    this.game.load.image('apple', 'assets/images/manzana.png');    
+    this.game.load.image('candy', 'assets/images/caramelo.png');    
     this.game.load.image('rotate', 'assets/images/rotate.png');    
-    this.game.load.image('toy', 'assets/images/rubber_duck.png');    
+    this.game.load.image('toy', 'assets/images/pato.png');    
     this.game.load.image('arrow', 'assets/images/arrow.png');   
     this.load.spritesheet('pet', 'assets/images/pet.png', 97, 83, 5, 1, 1); 
   },
