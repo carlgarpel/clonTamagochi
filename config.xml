@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.phonegap.helloworld" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Tamagocho</name>
+    <name>Tamagochi</name>
     <description>
         Copiado de https://software.intel.com/es-es/articles/how-to-make-a-mobile-virtual-pet-game-with-html5-and-cordova
+        y adaptado para PhoneGat
     </description>
     <author email="hola@devscola.org" href="http://devscola.org">
         Devscola
