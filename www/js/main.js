@@ -69,8 +69,8 @@ var GameState = {
 
     //stats
     var style = { font: "20px Arial", fill: "#fff"};
-    this.game.add.text(10, 20, "Health:", style);
-    this.game.add.text(140, 20, "Fun:", style);
+    this.game.add.text(10, 20, "Comida:", style);
+    this.game.add.text(140, 20, "Risa:", style);
 
     this.healthText = this.game.add.text(80, 20, "", style);
     this.funText = this.game.add.text(185, 20, "", style);
