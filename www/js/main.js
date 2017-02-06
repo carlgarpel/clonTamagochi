@@ -56,11 +56,7 @@ var GameState = {
        this.pet.inputEnabled = true;
        this.pet.input.enableDrag();
    
-   //para acelerómetro 
-      this.game.physics.arcade.enable(this.pet);
-      this.pet.body.collideWorldBounds = true;
-      this.pet.body.onWorldBounds = new Phaser.Signal();
-    
+   
     //buttons
     this.apple = this.game.add.sprite(72, 570, 'apple');
     this.apple.anchor.setTo(0.5);
@@ -253,8 +249,7 @@ var GameState = {
     registraDireccion: function(datosAceleracion){
       velocidadX = datosAceleracion.x ;
       velocidadY = datosAceleracion.y ;
-      //probando
-       this.pet.customParams.fun += 10;
+      
     }
 
 
