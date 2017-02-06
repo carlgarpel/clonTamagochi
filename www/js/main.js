@@ -229,14 +229,15 @@ var GameState = {
 
       this.game.time.events.add(2000, this.gameOver, this);
         };
-     // choque pato y manzana
-      game.physics.arcade.overlap(this.apple, this.toy, GameState.choqueConToy, null, this);
+     
     // cuando hay aceleración
       this.apple.body.velocity.y = velocidadY * 300;
       this.apple.body.velocity.x = velocidadX * -1 * 300;
 
       this.toy.body.velocity.y = velocidadY * 300;
       this.toy.body.velocity.x = velocidadX * -1 * 300;
+      // choque pato y manzana
+      game.physics.arcade.overlap(this.apple, this.toy, GameState.choqueConToy, null, this);
 
   },
   gameOver: function() {    
