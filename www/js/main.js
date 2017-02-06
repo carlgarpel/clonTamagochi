@@ -10,7 +10,7 @@ var GameState = {
     
    
     
-    //this.vigilaSensores();
+   this.vigilaSensores();
 
    
   },
@@ -239,7 +239,7 @@ var GameState = {
   
       function onSuccess(datosAceleracion){
   
-        app.registraDireccion(datosAceleracion);
+        GameState.registraDireccion(datosAceleracion);
       }
   
       navigator.accelerometer.watchAcceleration(onSuccess, onError,{ frequency: 10 });
