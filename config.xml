@@ -29,5 +29,5 @@
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
     <plugin name="cordova-plugin-vibration" />
-   <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="phonegap-version" value="cli-6.3.0"/>
 </widget>
