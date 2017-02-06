@@ -228,6 +228,9 @@ var GameState = {
       this.uiBlocked = true;
 
       this.game.time.events.add(2000, this.gameOver, this);
+
+      // choque pato y manzana
+      game.physics.arcade.overlap(apple, toy, this.choqueConToy, null, this);
     }
     // cuando hay aceleración
       this.apple.body.velocity.y = velocidadY * 300;
@@ -258,6 +261,11 @@ var GameState = {
       velocidadX = datosAceleracion.x ;
       velocidadY = datosAceleracion.y ;
       
+    },
+
+    choqueConToy: function{
+      toy.body.x = 15;
+      toytoy.body.y =90;
     }
 
 
