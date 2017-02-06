@@ -58,7 +58,7 @@ var GameState = {
    
     
     //buttons
-    this.apple = this.game.add.sprite(72, 570, 'apple');
+    this.apple = this.game.add.sprite(10, 300, 'apple');
     this.apple.anchor.setTo(0.5);
     this.apple.customParams = {health: 20};
     this.apple.inputEnabled = true;
