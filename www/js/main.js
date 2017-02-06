@@ -55,10 +55,7 @@ var GameState = {
     //draggable pet
     this.pet.inputEnabled = true;
     this.pet.input.enableDrag();
-    //para acelerómetro 
-      this.game.physics.arcade.enable(this.pet);
-      this.pet.body.collideWorldBounds = true;
-      this.pet.body.onWorldBounds = new Phaser.Signal();
+   
 
     
     //buttons
@@ -67,6 +64,11 @@ var GameState = {
     this.apple.customParams = {health: 20};
     this.apple.inputEnabled = true;
     this.apple.events.onInputDown.add(this.pickItem, this);
+
+     //para acelerómetro 
+      this.game.physics.arcade.enable(this.apple);
+      this.apple.body.collideWorldBounds = true;
+      this.apple.body.onWorldBounds = new Phaser.Signal();
 
     this.candy = this.game.add.sprite(144, 570, 'candy');
     this.candy.anchor.setTo(0.5);
@@ -224,8 +226,8 @@ var GameState = {
       this.game.time.events.add(2000, this.gameOver, this);
     }
     // cuando hay aceleración
-      this.pet.body.velocity.y = velocidadY;
-      this.pet.body.velocity.x = velocidadX * -1;
+      this.apple.body.velocity.y = velocidadY * 300;
+      this.apple.body.velocity.x = velocidadX * -1 * 300;
 
   },
   gameOver: function() {    
