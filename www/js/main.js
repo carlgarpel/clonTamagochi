@@ -1,8 +1,18 @@
 //this game will have only 1 state
 var GameState = {
   // variables para acelerómetro
+    inicio: function(){
+   
+    dificultad = 0;
     velocidadX = 0;
     velocidadY = 0;
+    puntuacion = 0;
+    
+   
+    
+    this.vigilaSensores();
+    
+  },
   //load the game assets before the game starts
   preload: function() {
     this.game.load.image('backyard', 'assets/images/fondo.png');    
@@ -14,7 +24,7 @@ var GameState = {
     this.load.spritesheet('pet', 'assets/images/pet.png', 97, 83, 5, 1, 1); 
     //para añadir control de acelerómetro
    
-    this.vigilaSensores();
+    
 
   },
   //executed after everything is loaded
@@ -240,6 +250,12 @@ var GameState = {
     }
 
 };
+
+if ('addEventListener' in document) {
+    document.addEventListener('deviceready', function() {
+        GameState.inicio();
+    }, false);
+}
 
 //initiate the Phaser framework
 var game = new Phaser.Game(360, 640, Phaser.AUTO);
