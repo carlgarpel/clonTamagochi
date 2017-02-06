@@ -11,6 +11,11 @@ var GameState = {
    
     
     this.vigilaSensores();
+
+    var game = new Phaser.Game(360, 640, Phaser.AUTO);
+
+    game.state.add('GameState', GameState);
+    game.state.start('GameState');
     
   },
   //load the game assets before the game starts
@@ -258,7 +263,3 @@ if ('addEventListener' in document) {
 }
 
 //initiate the Phaser framework
-var game = new Phaser.Game(360, 640, Phaser.AUTO);
-
-game.state.add('GameState', GameState);
-game.state.start('GameState');
