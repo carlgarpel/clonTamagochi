@@ -265,7 +265,7 @@ var GameState = {
 
     choqueConToy: function{
       toy.body.x = 15;
-      toytoy.body.y =90;
+      toy.body.y =90;
     }
 
 
