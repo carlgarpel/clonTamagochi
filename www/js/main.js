@@ -56,7 +56,7 @@ var GameState = {
        this.pet.inputEnabled = true;
        this.pet.input.enableDrag();
    
-   
+    
     //buttons
     this.apple = this.game.add.sprite(72, 570, 'apple');
     this.apple.anchor.setTo(0.5);
@@ -81,6 +81,11 @@ var GameState = {
     this.toy.inputEnabled = true;
     this.toy.events.onInputDown.add(this.pickItem, this);
 
+    //para acelerómetro 
+      this.game.physics.arcade.enable(this.toy);
+      this.toy.body.collideWorldBounds = true;
+      this.toy.body.onWorldBounds = new Phaser.Signal();
+      
     this.rotate = this.game.add.sprite(288, 570, 'rotate');
     this.rotate.anchor.setTo(0.5);
     this.rotate.inputEnabled = true;
