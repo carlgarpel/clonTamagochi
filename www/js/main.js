@@ -57,8 +57,8 @@ var GameState = {
     this.pet.input.enableDrag();
     //para acelerómetro 
       this.game.physics.arcade.enable(this.pet);
-     // this.pet.body.collideWorldBounds = true;
-      //this.pet.body.onWorldBounds = new Phaser.Signal();
+      this.pet.body.collideWorldBounds = true;
+      this.pet.body.onWorldBounds = new Phaser.Signal();
 
     
     //buttons
