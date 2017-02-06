@@ -1,5 +1,8 @@
 //this game will have only 1 state
 var GameState = {
+  // variables para acelerómetro
+    velocidadX = 0;
+    velocidadY = 0;
   //load the game assets before the game starts
   preload: function() {
     this.game.load.image('backyard', 'assets/images/fondo.png');    
@@ -9,6 +12,10 @@ var GameState = {
     this.game.load.image('toy', 'assets/images/pato.png');    
     this.game.load.image('arrow', 'assets/images/arrow.png');   
     this.load.spritesheet('pet', 'assets/images/pet.png', 97, 83, 5, 1, 1); 
+    //para añadir control de acelerómetro
+   
+    this.vigilaSensores();
+
   },
   //executed after everything is loaded
   create: function() {
@@ -37,6 +44,11 @@ var GameState = {
     //draggable pet
     this.pet.inputEnabled = true;
     this.pet.input.enableDrag();
+    //para la aceleración
+      this.game.physics.arcade.enable(pet);
+      this.pet.body.collideWorldBounds = true;
+      this.pet.body.onWorldBounds = new Phaser.Signal();
+
     
     //buttons
     this.apple = this.game.add.sprite(72, 570, 'apple');
@@ -200,10 +212,33 @@ var GameState = {
 
       this.game.time.events.add(2000, this.gameOver, this);
     }
+    // cuando hay aceleración
+      this.pet.body.velocity.y = velocidadY;
+      this.pet.body.velocity.x = velocidadX * -1;
+
   },
   gameOver: function() {    
     this.game.state.restart();
   },
+  vigilaSensores: function(){
+      
+      function onError() {
+          console.log('onError!');
+      }
+  
+      function onSuccess(datosAceleracion){
+  
+        app.registraDireccion(datosAceleracion);
+      }
+  
+      navigator.accelerometer.watchAcceleration(onSuccess, onError,{ frequency: 10 });
+    },
+  
+    registraDireccion: function(datosAceleracion){
+      velocidadX = datosAceleracion.x ;
+      velocidadY = datosAceleracion.y ;
+    }
+
 };
 
 //initiate the Phaser framework
