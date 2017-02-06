@@ -248,6 +248,8 @@ var GameState = {
     registraDireccion: function(datosAceleracion){
       velocidadX = datosAceleracion.x ;
       velocidadY = datosAceleracion.y ;
+      //probando
+       this.pet.customParams.fun += 10;
     }
 
 
