@@ -265,10 +265,10 @@ var GameState = {
       
     },
 
-   /* choqueConToy: function{
-     // this.toy.body.x = 35;
-      //this.toy.body.y =90;
-    }*/
+    choqueConToy: function{
+      this.toy.body.x = 35;
+      this.toy.body.y =90;
+    }
 
 
 };
