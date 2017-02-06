@@ -23,7 +23,7 @@ var GameState = {
     this.game.load.image('toy', 'assets/images/pato.png');    
     this.game.load.image('arrow', 'assets/images/arrow.png');   
     this.load.spritesheet('pet', 'assets/images/pet.png', 97, 83, 5, 1, 1); 
-    //para añadir control de acelerómetro
+    //para añadir control de acelerómetro se pasa a create
    
     
 
@@ -55,10 +55,10 @@ var GameState = {
     //draggable pet
     this.pet.inputEnabled = true;
     this.pet.input.enableDrag();
-    //para la aceleración
-     // this.game.physics.arcade.enable(pet);
-      //this.pet.body.collideWorldBounds = true;
-      //this.pet.body.onWorldBounds = new Phaser.Signal();
+    //para acelerómetro
+      this.game.physics.arcade.enable(pet);
+      this.pet.body.collideWorldBounds = true;
+      this.pet.body.onWorldBounds = new Phaser.Signal();
 
     
     //buttons
@@ -224,8 +224,8 @@ var GameState = {
       this.game.time.events.add(2000, this.gameOver, this);
     }
     // cuando hay aceleración
-    //  this.pet.body.velocity.y = velocidadY;
-    //  this.pet.body.velocity.x = velocidadX * -1;
+      this.pet.body.velocity.y = velocidadY;
+      this.pet.body.velocity.x = velocidadX * -1;
 
   },
   gameOver: function() {    
