@@ -53,8 +53,8 @@ var GameState = {
     this.pet.customParams = {health: 100, fun: 100};
 
     //draggable pet
-    this.pet.inputEnabled = true;
-    this.pet.input.enableDrag();
+      // this.pet.inputEnabled = true;
+        //this.pet.input.enableDrag();
    
    //para acelerómetro 
       this.game.physics.arcade.enable(this.pet);
