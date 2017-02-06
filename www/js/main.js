@@ -85,7 +85,7 @@ var GameState = {
       this.game.physics.arcade.enable(this.toy);
       this.toy.body.collideWorldBounds = true;
       this.toy.body.onWorldBounds = new Phaser.Signal();
-
+      
     this.rotate = this.game.add.sprite(288, 570, 'rotate');
     this.rotate.anchor.setTo(0.5);
     this.rotate.inputEnabled = true;
@@ -234,11 +234,14 @@ var GameState = {
       this.apple.body.velocity.y = velocidadY * 300;
       this.apple.body.velocity.x = velocidadX * -1 * 300;
 
+<<<<<<< HEAD
       this.toy.body.velocity.y = velocidadY * 300;
       this.toy.body.velocity.x = velocidadX * -1 * 300;
       // choque pato y manzana
      // game.physics.arcade.overlap(this.apple, this.toy, GameState.choqueConToy, null, this);
 
+=======
+>>>>>>> parent of b9f999f... faltaba update para toy
   },
   gameOver: function() {    
     this.game.state.restart();
