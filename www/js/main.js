@@ -3,14 +3,14 @@ var GameState = {
   // variables para acelerómetro
     inicio: function(){
    
-    dificultad = 0;
-    velocidadX = 0;
-    velocidadY = 0;
-    puntuacion = 0;
+    //dificultad = 0;
+    //velocidadX = 0;
+    //velocidadY = 0;
+    //puntuacion = 0;
     
    
     
-    this.vigilaSensores();
+    //this.vigilaSensores();
 
     var game = new Phaser.Game(360, 640, Phaser.AUTO);
 
@@ -60,9 +60,9 @@ var GameState = {
     this.pet.inputEnabled = true;
     this.pet.input.enableDrag();
     //para la aceleración
-      this.game.physics.arcade.enable(pet);
-      this.pet.body.collideWorldBounds = true;
-      this.pet.body.onWorldBounds = new Phaser.Signal();
+     // this.game.physics.arcade.enable(pet);
+      //this.pet.body.collideWorldBounds = true;
+      //this.pet.body.onWorldBounds = new Phaser.Signal();
 
     
     //buttons
@@ -228,8 +228,8 @@ var GameState = {
       this.game.time.events.add(2000, this.gameOver, this);
     }
     // cuando hay aceleración
-      this.pet.body.velocity.y = velocidadY;
-      this.pet.body.velocity.x = velocidadX * -1;
+    //  this.pet.body.velocity.y = velocidadY;
+    //  this.pet.body.velocity.x = velocidadX * -1;
 
   },
   gameOver: function() {    
@@ -263,3 +263,4 @@ if ('addEventListener' in document) {
 }
 
 //initiate the Phaser framework
+  
