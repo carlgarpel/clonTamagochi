@@ -3,20 +3,16 @@ var GameState = {
   // variables para acelerómetro
     inicio: function(){
    
-    //dificultad = 0;
-    //velocidadX = 0;
-    //velocidadY = 0;
-    //puntuacion = 0;
+    dificultad = 0;
+    velocidadX = 0;
+    velocidadY = 0;
+    puntuacion = 0;
     
    
     
     //this.vigilaSensores();
 
-    var game = new Phaser.Game(360, 640, Phaser.AUTO);
-
-    game.state.add('GameState', GameState);
-    game.state.start('GameState');
-    
+   
   },
   //load the game assets before the game starts
   preload: function() {
@@ -254,12 +250,19 @@ var GameState = {
       velocidadY = datosAceleracion.y ;
     }
 
+
 };
 
 if ('addEventListener' in document) {
     document.addEventListener('deviceready', function() {
         GameState.inicio();
     }, false);
+
+    var game = new Phaser.Game(360, 640, Phaser.AUTO);
+
+    game.state.add('GameState', GameState);
+    game.state.start('GameState');
+    
 }
 
 //initiate the Phaser framework
