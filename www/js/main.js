@@ -273,10 +273,10 @@ var GameState = {
 
 };
 
-if ('addEventListener' in document) {
+/*if ('addEventListener' in document) {
     document.addEventListener('deviceready', function() {
         GameState.inicio();
-    }, false);
+    }, false);*/
 
     var game = new Phaser.Game(360, 640, Phaser.AUTO);
 
