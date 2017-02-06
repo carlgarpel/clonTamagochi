@@ -237,7 +237,7 @@ var GameState = {
       this.toy.body.velocity.y = velocidadY * 300;
       this.toy.body.velocity.x = velocidadX * -1 * 300;
       // choque pato y manzana
-      game.physics.arcade.overlap(this.apple, this.toy, GameState.choqueConToy, null, this);
+     // game.physics.arcade.overlap(this.apple, this.toy, GameState.choqueConToy, null, this);
 
   },
   gameOver: function() {    
